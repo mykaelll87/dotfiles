@@ -1,0 +1,5 @@
+create-react-app
+expo-cli
+http-server
+typescript
+ytdl

@@ -16,12 +16,16 @@ if (!(Get-Command clist -ErrorAction SilentlyContinue)){
     RefreshEnv.cmd
 }
 
-cinst git.install --params "/NoAutoCrlf /NoShellIntegration" --limit-output
+cinst git.install --params "/NoAutoCrlf /NoShellIntegration" --limit-output -y
 
 if (!(Test-Path ~/dotrepo)){
-    git clone "https://github.com/mykaelll87/dotfiles.git" "$env:HOMEPATH/.dotfiles"
+    [System.Environment]::SetEnvironmentVariable("DOTFILES", "$env:HOMEPATH\.dotfiles", [System.EnvironmentVariableTarget]::User)
+    git clone "https://github.com/mykaelll87/dotfiles.git" "DOTFILES"
 } 
 
 Push-Location "~/.dotfiles"
 
+Push-Location "packages"
+    ./packages.ps1 -step "Start"
+Pop-Location
 Pop-Location
