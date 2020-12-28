@@ -30,4 +30,7 @@ Push-Location "~/.dotfiles"
 Push-Location "packages"
     ./packages.ps1 -step "Start"
 Pop-Location
+Push-Location "symlink"
+    ./setLinks.ps1
+Pop-Location
 Pop-Location
