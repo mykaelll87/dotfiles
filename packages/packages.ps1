@@ -31,4 +31,8 @@ Get-Content ./npm.txt | % {
     npm i -g $_
 } 
 
+Get-Content ./vscode.txt | % {
+    code --install-extension $_
+}
+
 Write-Host "Installed all dependencies"
