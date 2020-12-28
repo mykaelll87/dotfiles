@@ -25,6 +25,8 @@ if (!(Test-Path ~/dotrepo)){
 
 Push-Location "~/.dotfiles"
 
+./windows.ps1
+
 Push-Location "packages"
     ./packages.ps1 -step "Start"
 Pop-Location
