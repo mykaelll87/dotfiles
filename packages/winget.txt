@@ -1,0 +1,12 @@
+Docker.DockerDesktop
+Dropbox.Dropbox
+Git.Git
+KeePassXCTeam.KeePassXC
+Microsoft.DotNet.SDK.9
+Microsoft.PowerShell
+Microsoft.PowerToys
+Microsoft.VisualStudioCode
+Mozilla.Firefox
+OpenJS.NodeJS
+Python.Launcher
+Python.Python.3.13
